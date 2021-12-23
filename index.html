@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      position: relative;
+      font-size: .7rem;
+    }
+    .image{
+      position: absolute;
+      z-index: -1;
+      max-height: 98vh;
+    }
+    .col{
+      border: 1px solid #fff;
+      color:#fff;
+      display: block;
+      height: 500px;
+      width: 200px;
+      flex:0 0 auto;
+      line-height: 500px;
+    }
+    .row{
+      flex-wrap:nowrap;
+      top:50%;
+      transform: translateY(-50%);
+    }
+    .row>*{
+      max-width:none;
+    }
+    .id2{
+      backdrop-filter: none;
+    }
+    .id3{
+      backdrop-filter: grayscale(1);
+    }
+    .id4{
+      backdrop-filter: brightness(1.5)
+    }
+    .id5{
+      backdrop-filter: blur(5px)
+    }
+    .id6{backdrop-filter: contrast(0.8)}
+    .id7{backdrop-filter: invert(0.7)}
+    .id8{backdrop-filter: opacity(0.4)}
+    .id9{backdrop-filter: sepia(0.4)}
+    .id10{backdrop-filter: saturate(1.8)}
+    .id11{backdrop-filter: hue-rotate(120deg)}
+    .rounded-start{
+      border-bottom-left-radius: 2rem !important;
+      border-top-left-radius: 2rem !important;
+    }
+    .rounded-end {
+      border-top-right-radius:2rem !important;
+      border-bottom-right-radius: 2rem !important;
+    }
+    @media (max-width:768px) {
+      .col{
+        flex:1 1 auto;
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+      }
+      .row{
+        flex-wrap: wrap;
+        top:0;
+        transform: translateY(0);
+        margin:5px !important;
+      }
+      .rounded-start{
+      border-bottom-left-radius: 0rem !important;
+      border-top-left-radius: 0rem !important;
+    }
+    .rounded-end {
+      border-top-right-radius:0rem !important;
+      border-bottom-right-radius: 0rem !important;
+    }
+    .image{
+      max-width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid m-0 p-0 wrap vh-100 ">
+    <img src="https://picsum.photos/4580/1480/?random=1" class='image'>
+    <div class="row ms-5 position-absolute">
+      <div class="col text-center id1 rounded-start shadow-lg">SCROLL</div>
+      <div class="col text-center id2 shadow-lg">backdrop-filter: none</div>
+      <div class="col text-center id3 shadow-lg">backdrop-filter: grayscale(1)</div>
+      <div class="col text-center id4 shadow-lg">brightness(1.5)</div>
+      <div class="col text-center id5 shadow-lg">backdrop-filter: blur(5px)</div>
+      <div class="col text-center id6 shadow-lg">backdrop-filter: contrast(0.8)</div>
+      <div class="col text-center id7 shadow-lg">backdrop-filter: invert(0.7)</div>
+      <div class="col text-center id8 shadow-lg">backdrop-filter: opacity(0.4)</div>
+      <div class="col text-center id9 shadow-lg">backdrop-filter: sepia(0.4)</div>
+      <div class="col text-center id10 shadow-lg">backdrop-filter: saturate(1.8)</div>
+      <div class="col text-center id11 shadow-lg rounded-end"> hue-rotate(120deg)</div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js"></script>
+</body>
+</html>
